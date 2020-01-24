@@ -1,0 +1,17 @@
+version: "3.1" 
+services:
+    app1:
+        image: fnagashima/dotnetcore-sample
+        restart: always
+        ports: 
+            - 8080:80
+        environment: 
+            Greeting : "Good Morning!"
+    app2: 
+        # Change this repos
+        image: fnagashima/dotnetcore-sample
+        restart: always
+        ports: 
+            - 8081:80
+        environment:
+            Greeting : "Good Evening!"
